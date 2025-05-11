@@ -1,8 +1,12 @@
 # JavaScript Exercises
 
+Made by **Łukasz Pasternak** – [pascard20](https://github.com/pascard20)
+
 ## Fibonacci Sequence
 
 This project implements the **Fibonacci Sequence** in JavaScript, as part of [The Odin Project](https://www.theodinproject.com/lessons/javascript-recursion) curriculum. It includes two versions: one using iteration and the other using recursion. Both will generate a list of Fibonacci numbers.
+
+🔗 Code: [fibonacci.js](https://github.com/pascard20/javascript-exercises/blob/main/fibonacci.js)
 
 ### Features
 
@@ -24,9 +28,11 @@ This project implements the **Fibonacci Sequence** in JavaScript, as part of [Th
   fibsRec(8); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
   ```
 
-## Linked List Implementation
+## Linked List
 
 This project is an implementation of a **Linked List** data structure in JavaScript, based on [The Odin Project](https://www.theodinproject.com/lessons/javascript-linked-lists) curriculum. It demonstrates the use of classes, recursion, and encapsulation to build a fully functional linked list.
+
+🔗 Code: [linkedList.js](https://github.com/pascard20/javascript-exercises/blob/main/linkedList.js)
 
 ### Features
 
@@ -58,11 +64,13 @@ The `LinkedList` class represents the entire linked list and provides methods fo
 
 - **Encapsulation**: My implementation uses private fields (`#head`, `#tail`, `#size`) to protect the internal state of the linked list and prevent unauthorized editing.
 - **Recursion**: A recursive `traverse` method is used to navigate the list, simplifying operations like finding nodes or updating links.
-- **Readability**: The `toString` method makes it easy to visualize the list and debug your code.
+- **Readability**: The `toString` method makes it easy to visualize the list and debug the code.
 
-## Merge Sort Implementation
+## Merge Sort
 
 This project implements the **Merge Sort** algorithm in JavaScript, as part of [The Odin Project](https://www.theodinproject.com/lessons/javascript-recursion) curriculum. The implementation uses a recursive approach to divide and conquer, sorting an array by repeatedly splitting it into smaller subarrays and merging them back together in sorted order.
+
+🔗 Code: [mergeSort.js](https://github.com/pascard20/javascript-exercises/blob/main/mergeSort.js)
 
 ### Features
 
