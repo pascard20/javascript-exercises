@@ -14,9 +14,6 @@
   "author": "Łukasz Pasternak",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/pascard20/javascript-exercises/issues"
-  },
   "homepage": "https://github.com/pascard20/javascript-exercises#readme",
   "devDependencies": {
     "@eslint/css": "^0.7.0",
