@@ -1,7 +1,5 @@
 # JavaScript Exercises
 
-Made by **Łukasz Pasternak** – [pascard20](https://github.com/pascard20)
-
 ## Fibonacci Sequence
 
 This project implements the **Fibonacci Sequence** in JavaScript, as part of [The Odin Project](https://www.theodinproject.com/lessons/javascript-recursion) curriculum. It includes two versions: one using iteration and the other using recursion. Both will generate a list of Fibonacci numbers.
