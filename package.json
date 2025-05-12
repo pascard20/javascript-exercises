@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "Łukasz Pasternak",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "homepage": "https://github.com/pascard20/javascript-exercises#readme",
   "devDependencies": {
     "@eslint/css": "^0.7.0",
