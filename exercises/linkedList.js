@@ -1,7 +1,7 @@
 // Following the exercise from The Odin Project:
 // https://www.theodinproject.com/lessons/javascript-linked-lists
 
-class LinkedList {
+export class LinkedList {
   #head;
   #size;
   #tail;
