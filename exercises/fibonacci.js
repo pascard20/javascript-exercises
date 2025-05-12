@@ -1,7 +1,7 @@
 // Following the exercise from The Odin Project:
 // https://www.theodinproject.com/lessons/javascript-recursion
 
-const fibs = (number) => {
+export const fibs = (number) => {
   if (number <= 0) {
     console.log("Number must be greater than 0");
     return null;
@@ -18,7 +18,7 @@ const fibs = (number) => {
   return output;
 };
 
-const fibsRec = (number) => {
+export const fibsRec = (number) => {
   if (number <= 0) {
     console.log("Number must be greater than 0");
     return null;

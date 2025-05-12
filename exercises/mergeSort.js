@@ -1,7 +1,7 @@
 // Following the exercise from The Odin Project:
 // https://www.theodinproject.com/lessons/javascript-recursion
 
-const mergeSort = (numbers) => {
+export const mergeSort = (numbers) => {
   if (numbers.length < 2) return numbers;
   const cutIndex = Math.floor(numbers.length / 2);
 

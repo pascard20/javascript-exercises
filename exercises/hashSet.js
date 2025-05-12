@@ -1,3 +1,6 @@
+// Following the exercise from The Odin Project:
+// https://www.theodinproject.com/lessons/javascript-hashmap
+
 import { HashMap } from "./hashMap.js";
 
 export class HashSet extends HashMap {

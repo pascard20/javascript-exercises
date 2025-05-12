@@ -1,3 +1,6 @@
+// Following the exercise from The Odin Project:
+// https://www.theodinproject.com/lessons/javascript-hashmap
+
 export class HashMap {
   #defaultCapacity = 16;
   #capacity = this.#defaultCapacity;
