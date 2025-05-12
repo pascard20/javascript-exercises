@@ -1,4 +1,4 @@
-import { HashSet } from "./hashSet.js";
+import { HashSet } from "../exercises/hashSet.js";
 
 const set = new HashSet();
 

@@ -1,4 +1,4 @@
-import { HashMap } from "./hashMap.js";
+import { HashMap } from "../exercises/hashMap.js";
 
 const populateHashTable = (hashTable, entries) => {
   entries.forEach((entry) => hashTable.set(entry[0], entry[1]));
