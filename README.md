@@ -1,90 +1,83 @@
 # JavaScript Exercises
 
 ## Fibonacci Sequence
+Two functions that generate the Fibonacci sequence: iterative and recursive solution.
 
-This project implements the **Fibonacci Sequence** in JavaScript, as part of [The Odin Project](https://www.theodinproject.com/lessons/javascript-recursion) curriculum. It includes two versions: one using iteration and the other using recursion. Both will generate a list of Fibonacci numbers.
-
-🔗 Code: [fibonacci.js](https://github.com/pascard20/javascript-exercises/blob/main/fibonacci.js)
-
-### Features
-
-#### Iterative Solution: `fibs(number)`
-
-- Accepts a number and returns an array of that many Fibonacci numbers.
-- Uses a loop to generate the sequence by adding the last two numbers in the array each time.
-- Example:
-  ```javascript
-  fibs(8); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
-  ```
-
-#### Recursive Solution: `fibsRec(number)`
-
-- Also takes a number and returns that many Fibonacci numbers in an array.
-- This one uses recursion to build the sequence. It keeps calling itself with a smaller input, while summing the last two values from the growing array.
-- Example:
-  ```javascript
-  fibsRec(8); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
-  ```
-
-## Linked List
-
-This project is an implementation of a **Linked List** data structure in JavaScript, based on [The Odin Project](https://www.theodinproject.com/lessons/javascript-linked-lists) curriculum. It demonstrates the use of classes, recursion, and encapsulation to build a fully functional linked list.
-
-🔗 Code: [linkedList.js](https://github.com/pascard20/javascript-exercises/blob/main/linkedList.js)
+🔗 [Code](https://github.com/pascard20/javascript-exercises/blob/main/exercises/fibonacci.js)
 
 ### Features
+* `fibs(number)` – Iterative version. Returns an array of the first `number` Fibonacci numbers using a loop.
+* `fibsRec(number)` – Recursive version. Builds the array by calling itself and summing the last two elements.
 
-#### Node Class
+Example:
+```js
+fibs(8);     // [0, 1, 1, 2, 3, 5, 8, 13]
+fibsRec(8);  // [0, 1, 1, 2, 3, 5, 8, 13]
+```
 
-The `Node` class represents an individual node in the linked list. Each node contains:
+## Hash Map
+Custom HashMap class with hashing, collision handling via linked lists, and dynamic resizing.
 
-- `value`: The data stored in the node.
-- `nextNode`: A reference to the next node in the list (or `null` if it's the last one).
+🔗 [Code](https://github.com/pascard20/javascript-exercises/blob/main/exercises/hashMap.js)
 
-#### LinkedList Class
-
-The `LinkedList` class represents the entire linked list and provides methods for adding, removing, searching, and displaying the nodes.
-
-- `append(value)`: Adds a new node with the given value to the end of the list.
-- `at(index)`: Returns the node at the specified index.
-- `contains(value)`: Checks if a value exists in the list.
-- `find(value)`: Returns the index of the node containing the value, or `null` if not found.
-- `head`: Returns the first node in the list.
-- `insertAt(value, index)`: Inserts a new node with the given value at the specified index.
-- `pop()`: Removes the last node from the list.
-- `prepend(value)`: Adds a new node with the given value to the start of the list.
-- `removeAt(index)`: Removes the node at the specified index.
-- `size`: Returns the total number of nodes in the list.
-- `tail`: Returns the last node in the list.
-- `toString()`: Returns a string representation of the list in the format `( value ) -> ( value ) -> null`.
+### Key Features
+* `set(key, value)` – Adds/updates a key-value pair.
+* `get(key)` – Retrieves the value for a key, or null if not found.
+* `remove(key)` – Deletes the key-value pair. Returns true if successful.
+* `has(key)` – Checks if a key exists.
+* `clear()` – Empties the hash map and resets capacity.
+* `keys` – Array of all keys.
+* `values` – Array of all values.
+* `entries` – Array of all key-value pairs.
+* `capacity` – Total number of buckets.
+* `length` – Total number of entries.
+* `occupied` – Buckets that contain at least one entry.
 
 ### Highlights
+- Automatically resizes based on load and shrink factors.
+- Uses linked lists (as created in another exercise) for collision resolution.
+- Prime number-based hashing with intent of even key distribution.
+- Internal state is protected using private class fields.
 
-- **Encapsulation**: My implementation uses private fields (`#head`, `#tail`, `#size`) to protect the internal state of the linked list and prevent unauthorized editing.
-- **Recursion**: A recursive `traverse` method is used to navigate the list, simplifying operations like finding nodes or updating links.
-- **Readability**: The `toString` method makes it easy to visualize the list and debug the code.
+## Hash Set
+The HashSet uses the existing HashMap structure to store unique keys without associated values.
 
-## Merge Sort
-
-This project implements the **Merge Sort** algorithm in JavaScript, as part of [The Odin Project](https://www.theodinproject.com/lessons/javascript-recursion) curriculum. The implementation uses a recursive approach to divide and conquer, sorting an array by repeatedly splitting it into smaller subarrays and merging them back together in sorted order.
-
-🔗 Code: [mergeSort.js](https://github.com/pascard20/javascript-exercises/blob/main/mergeSort.js)
+🔗 [Code](https://github.com/pascard20/javascript-exercises/blob/main/exercises/hashSet.js)
 
 ### Features
+- `add(key)` – Adds a key to the set if it doesn't already exist.
+- Inherits `remove`, `has`, `clear`, `keys`, and other methods from HashMap.
 
-#### `mergeSort(numbers)`
+## Linked List
+Implementation of a singly linked list using classes, recursion, and encapsulation.
 
-- Takes an array of numbers as input and returns a sorted version.
-- Uses recursion to divide the array into halves until each subarray has only one element.
-- Merges the sorted subarrays back together using the `merge` function.
-- Example:
-  ```javascript
-  mergeSort([3, 2, 1, 13, 8, 5, 0, 1]); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
-  mergeSort([105, 79, 100, 110]); // Output: [79, 100, 105, 110]
-  ```
+🔗 [Code](https://github.com/pascard20/javascript-exercises/blob/main/exercises/linkedList.js)
 
-#### `merge(left, right)`
+### Node class
+- `value`: The data stored in the node.
+- `nextNode`: Reference to the next node (or null).
 
-- Takes two sorted arrays and combines them into one sorted array.
-- Compares the first items of each array and adds the smaller one to the result.
-- Once one array is empty, it just adds whatever’s left in the other one.
+### LinkedList class
+Provides methods to access and manipulate the list:
+- **Add/remove**: `append(value)`, `prepend(value)`, `insertAt(value, index)`, `removeAt(index)`, `pop()`
+- **Search**: `at(index)`, `contains(value)`, `find(value)`
+- **Utility**: `head`, `tail`, `size`, `toString()`
+
+### Highlights
+- Uses private fields for encapsulation.
+- Recursion simplifies traversal and search logic.
+- `toString()` provides a clear view of the list's structure.
+
+## Merge Sort
+Implements merge sort algorithm using a recursive divide-and-conquer technique.
+
+🔗 [Code](https://github.com/pascard20/javascript-exercises/blob/main/exercises/mergeSort.js)
+
+- `mergeSort(array)` – Splits the array into halves recursively, then merges sorted halves.
+- `merge(left, right)` – Merges two sorted arrays into one.
+
+Examples:
+```js
+mergeSort([3, 2, 1, 13, 8, 5, 0, 1]);  // [0, 1, 1, 2, 3, 5, 8, 13]
+mergeSort([105, 79, 100, 110]);       // [79, 100, 105, 110]
+```
