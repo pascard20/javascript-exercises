@@ -42,13 +42,8 @@ class LinkedList {
   append(value) {
     const newNode = new Node(value);
 
-    if (this.#head === null) {
-      this.#head = newNode;
-    } else {
-      const lastNode = this.traverse().node;
-      lastNode.nextNode = newNode;
-    }
-
+    if (this.#head === null) this.#head = newNode;
+    else this.#tail.nextNode = newNode;
     this.#size++;
     this.#tail = newNode;
     return newNode;
@@ -108,8 +103,8 @@ class LinkedList {
   insertAt(value, index) {
     if (index < 0 || index > this.#size) throw new Error("insertAt: Index out of bounds");
 
-    if (index === 0) return this.prepend(value);
     if (index === this.#size) return this.append(value);
+    if (index === 0) return this.prepend(value);
 
     const previousNode = this.traverse(this.#head, index - 1).node;
     const nextNode = previousNode.nextNode;
