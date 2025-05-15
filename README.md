@@ -8,32 +8,38 @@ Implementation of a Binary Search Tree with recursion, tree traversal and balanc
 
 ### Features
 
-* **Tree Construction**  
-  * Builds a balanced binary search tree from an input array.
+- **Tree Construction**
 
-* **Modification**  
-  * `insert(value)`, `deleteItem(value)` 
+  - Builds a balanced binary search tree from an input array.
 
-* **Search**  
-  * `find(value)`
+- **Modification**
 
-* **Traversal**  
-  * `levelOrder(callback)` – Breadth-first traversal  
-  * `inOrder(callback)` – Left → Root → Right  
-  * `preOrder(callback)` – Root → Left → Right  
-  * `postOrder(callback)` – Left → Right → Root
+  - `insert(value)`, `deleteItem(value)`
 
-* **Properties**  
-  * `size` – Total number of nodes
-  * `height(value)` – Height of the subtree at given value
-  * `depth(value)` – Depth of the node relative to the root
-  * `isBalanced()`
+- **Search**
 
-* **Maintenance**  
-  * `rebalance()`
+  - `find(value)`
 
-* **Visualization**  
-  * `print()` – Displays the tree structure in the console
+- **Traversal**
+
+  - `levelOrder(callback)` – Breadth-first traversal
+  - `inOrder(callback)` – Left → Root → Right
+  - `preOrder(callback)` – Root → Left → Right
+  - `postOrder(callback)` – Left → Right → Root
+
+- **Properties**
+
+  - `size` – Total number of nodes
+  - `height(value)` – Height of the subtree at given value
+  - `depth(value)` – Depth of the node relative to the root
+  - `isBalanced()`
+
+- **Maintenance**
+
+  - `rebalance()`
+
+- **Visualization**
+  - `print()` – Displays the tree structure in the console
 
 ## Fibonacci Sequence
 
@@ -90,6 +96,32 @@ The HashSet uses the existing HashMap structure to store unique keys without ass
 
 - `add(key)` – Adds a key to the set if it doesn't already exist.
 - Inherits `remove`, `has`, `clear`, `keys`, and other methods from HashMap.
+
+## Knight's Travails
+
+A function that finds the shortest path for a knight on a chessboard from a starting position to a target position using breadth-first search.
+
+🔗 [Code](https://github.com/pascard20/javascript-exercises/blob/main/exercises/knightsTravails.js)
+
+#### Features:
+
+- `knightMoves(start, end)` – Calculates and prints the shortest sequence of moves for a knight to reach the target square from the starting square.
+- Supports all valid chessboard coordinates (0–7 for both axes).
+- Prints the number of moves and all (or a random sample of) shortest paths in the chess notation (e.g., `a1 -> b3 -> c5`).
+
+#### Example:
+
+```js
+knightMoves([0, 0], [5, 4]);
+
+// | a1 => f5 |
+// A knight can make it in 3 moves.
+
+// 3 paths found:
+// a1  ->  b3  ->  d4  ->  f5
+// a1  ->  c2  ->  d4  ->  f5
+// a1  ->  c2  ->  e3  ->  f5
+```
 
 ## Linked List
 
