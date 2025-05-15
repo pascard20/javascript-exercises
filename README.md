@@ -1,5 +1,40 @@
 # JavaScript Exercises
 
+## Binary Search Tree
+
+Implementation of a Binary Search Tree with recursion, tree traversal and balancing techniques.
+
+🔗 Code: [binarySearchTree.js](https://github.com/pascard20/javascript-exercises/blob/main/exercises/binarySearchTree.js)
+
+### Features
+
+* **Tree Construction**  
+  * Builds a balanced binary search tree from an input array.
+
+* **Modification**  
+  * `insert(value)`, `deleteItem(value)` 
+
+* **Search**  
+  * `find(value)`
+
+* **Traversal**  
+  * `levelOrder(callback)` – Breadth-first traversal  
+  * `inOrder(callback)` – Left → Root → Right  
+  * `preOrder(callback)` – Root → Left → Right  
+  * `postOrder(callback)` – Left → Right → Root
+
+* **Properties**  
+  * `size` – Total number of nodes
+  * `height(value)` – Height of the subtree at given value
+  * `depth(value)` – Depth of the node relative to the root
+  * `isBalanced()`
+
+* **Maintenance**  
+  * `rebalance()`
+
+* **Visualization**  
+  * `print()` – Displays the tree structure in the console
+
 ## Fibonacci Sequence
 
 Two functions that generate the Fibonacci sequence: iterative and recursive solution.
