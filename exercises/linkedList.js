@@ -9,7 +9,7 @@ export class LinkedList {
   constructor(head = null) {
     this.#head = head;
     this.#tail = head;
-    this.#size = head ? 1 : 0;
+    this.#size = head ? this.traverse().index + 1 : 0;
   }
 
   get head() {
@@ -135,7 +135,7 @@ export class LinkedList {
   }
 }
 
-class Node {
+export class Node {
   constructor(value = null, nextNode = null) {
     this.value = value;
     this.nextNode = nextNode;
